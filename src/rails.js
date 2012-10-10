@@ -197,6 +197,11 @@
 
       if (target) { form.attr('target', target); }
 
+      var ajax = link.data('ajax');
+      if (ajax !== undefined) {
+        form.attr('data-ajax', ajax);
+      }
+
       form.hide().append(metadata_input).appendTo('body');
       form.submit();
     },
